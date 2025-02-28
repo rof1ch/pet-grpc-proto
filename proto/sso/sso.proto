@@ -5,12 +5,12 @@ package auth;
 option go_package = "rof1ch.sso.v1;ssov1";
 
 service Auth {
-	rpc Register (RegisterRouter) returns (RegisterResponse);
+	rpc Register (RegisterRequest) returns (RegisterResponse);
 	rpc Login (LoginRequest) returns (LoginResponse);
 	rpc IsAdmin (IsAdminRequest) returns (IsAdminResponse);
 }
 
-message RegisterRouter {
+message RegisterRequest {
 	string email = 1;
 	string password = 2;
 }
